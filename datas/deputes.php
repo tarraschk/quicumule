@@ -30,8 +30,9 @@ function listing_deputes_cumulard() {
 
         if (intval($depute_objet['nb_mandats']) > 1) { //uniquement les députés ayant plus d'un mandat
             $depute = [
-                'nom_de_famille' => $depute_objet['nom_de_famille'],
+                'nom' => $depute_objet['nom_de_famille'],
                 'prenom' => $depute_objet['prenom'],
+                'fonction' => 'Député',
                 'twitter' => '',
                 'site_web' => $depute_objet['sites_web'],
                 'departement_num' => $depute_objet['num_deptmt'],
