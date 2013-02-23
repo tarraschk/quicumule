@@ -1,0 +1,88 @@
+{
+	"_licence" : "This database is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/",
+	"_authors" : "Maxime ALAY-EDDINE & Jean-Alain R\u00e9"
+	"_sources" : "http://www.gouvernement.fr/gouvernement/composition-du-gouvernement and public lists from @samuellaurent",
+	"_update" : "2013-02-23",
+	"values" : [
+					{
+						"nom" : "Touraine",
+						"prenom" : "Marisol",
+						"fonction" : "Ministre des Affaires sociales et de la sant\u00e9",
+						"departement" : "37",
+						"autres_fonctions" : "Conseill\u00e8re g\u00e9n\u00e9rale d'Indre-et-Loire",
+						"twitter" : "MarisolTouraine"
+					},
+					{
+						"nom" : "Le Drian",
+						"prenom" : "Jean-Yves",
+						"fonction" : "Ministre de la D\u00e9fense",
+						"departement" : "56",
+						"autres_fonctions" : "Conseiller r\u00e9gional de Bretagne",
+						"twitter" : "JY_LeDrian"
+					},
+					{
+						"nom" : "Vallaud-Belkacem",
+						"prenom" : "Najat",
+						"fonction" : "Ministre des Droits des femmes et porte-parole du gouvernement",
+						"departement" : "69",
+						"autres_fonctions" : "Conseill\u00e8re municipale et communautaire de Lyon \/ Conseill\u00e8re g\u00e9n\u00e9rale du Rh\u00f4ne",
+						"twitter" : "najatvb"
+					},
+					{
+						"nom" : "Lebranchu",
+						"prenom" : "Marylise",
+						"fonction" : "Ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la fonction publique",
+						"departement" : "29",
+						"autres_fonctions" : "Conseill\u00e8re r\u00e9gionale de Bretagne",
+						"twitter" : "mlebranchu"
+					},
+					{
+						"nom" : "Lurel",
+						"prenom" : "Victorin",
+						"fonction" : "Ministre des Outremer",
+						"departement" : "971",
+						"autres_fonctions" : "Conseiller r\u00e9gional de Guadeloupe",
+						"twitter" : "VictorinLurel"
+					},
+					{
+						"nom" : "Pinel",
+						"prenom" : "Sylvia",
+						"fonction" : "Ministre de l'Artisanat, du commerce et du tourisme",
+						"departement" : "82",
+						"autres_fonctions" : "Conseill\u00e8re r\u00e9gionale de Midi-Pyr\u00e9n\u00e9es",
+						"twitter" : "SylviaPinel"
+					},
+					{
+						"nom" : "Hamon",
+						"prenom" : "Beno\u00eet",
+						"fonction" : "Ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre de l'Economie, des finances et du commerce ext\u00e9rieur, charg\u00e9 de l'Economie sociale et solidaire et de la consommation",
+						"departement" : "78",
+						"autres_fonctions" : "Conseiller r\u00e9gional d'Ile-de-France",
+						"twitter" : "benoithamon"
+					},
+					{
+						"nom" : "Carlotti",
+						"prenom" : "Marie-Arlette",
+						"fonction" : "Ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la ministre des Affaires sociales et de la sant\u00e9, charg\u00e9e des Personnes handicap\u00e9es et de la lutte contre l'exclusion",
+						"departement" : "13",
+						"autres_fonctions" : "Conseill\u00e8re g\u00e9n\u00e9rale des Bouches-du-Rh\u00f4ne",
+						"twitter" : "MACarlotti"
+					},
+					{
+						"nom" : "Repentin",
+						"prenom" : "Thierry",
+						"fonction" : "Ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre du Travail, de l'emploi, de la formation professionnelle et du dialogue social, charg\u00e9 de la Formation professionnelle et de l'apprentissage",
+						"departement" : "73",
+						"autres_fonctions" : "Adjoint au maire de Sonnaz \/ Conseiller g\u00e9n\u00e9ral de Savoie",
+						"twitter" : "ThierryRepentin"
+					},
+					{
+						"nom" : "Escoffier",
+						"prenom" : "Anne-Marie",
+						"fonction" : "Ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la Ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la Fonction publique, charg\u00e9e de la d\u00e9centralisation",
+						"departement" : "12",
+						"autres_fonctions" : "Conseill\u00e8re g\u00e9n\u00e9rale de l'Aveyron",
+						"twitter" : ""
+					}
+				]
+}
