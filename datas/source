@@ -1,2 +1,9 @@
-Source : 
-députés : http://www.nosdeputes.fr/deputes/json
+Sources : 
+	Députés : http://www.nosdeputes.fr/deputes/enmandat/json
+	Sénateurs : http://www.nossenateurs.fr/senateurs/enmandat/json
+	Ministres : 
+	Comptes Twitter issus des listes de Samuel Laurent @samuellaurent
+	
+Mentions légales à ajouter sur le site :
+Sources :
+NosDéputés.fr, NosSénateurs.fr par Regards Citoyens à partir de l'Assemblée nationale/du Sénat et du Journal Officiel
