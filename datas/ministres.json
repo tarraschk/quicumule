@@ -45,7 +45,8 @@
 						"fonction" : "ministre des Affaires sociales et de la sant\u00e9",
 						"autres_fonctions" : [
 								{
-									"fonction" : "Conseillère générale d'Indre-et-Loire"
+									"fonction" : "Conseillère générale d'Indre-et-Loire",
+									"departement" : "37"
 								}
 							],
 						"twitter" : "MarisolTouraine"
@@ -98,7 +99,8 @@
 						"fonction" : "ministre de la D\u00e9fense",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseiller régional de Bretagne"
+									"type" : "Conseiller régional de Bretagne",
+									"departement" : "56"
 								}
 							],
 						"twitter" : "JY_LeDrian"
@@ -123,10 +125,12 @@
 						"fonction" : "ministre des Droits des femmes et porte-parole du gouvernement",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseillère municipale et communautaire de Lyon"
+									"type" : "Conseillère municipale et communautaire de Lyon",
+									"departement" : "69"
 								},
 								{
-									"type" : "Conseillère générale du Rhône"
+									"type" : "Conseillère générale du Rhône",
+									"departement" : "69"
 								}
 							],
 						"twitter" : "najatvb"
@@ -144,7 +148,8 @@
 						"fonction" : "ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la fonction publique",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseillère régionale de Bretagne"
+									"type" : "Conseillère régionale de Bretagne",
+									"departement" : "29"
 								}
 							],
 						"twitter" : "mlebranchu"
@@ -155,7 +160,8 @@
 						"fonction" : "ministre des Outremer",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseiller régional de Guadeloupe"
+									"type" : "Conseiller régional de Guadeloupe",
+									"departement" : "971"
 								}
 							],
 						"twitter" : "VictorinLurel"
@@ -166,7 +172,8 @@
 						"fonction" : "ministre de l'Artisanat, du commerce et du tourisme",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseillère régionale de Midi-Pyrénées"
+									"type" : "Conseillère régionale de Midi-Pyrénées",
+									"departement" : "82"
 								}
 							],
 						"twitter" : "SylviaPinel"
@@ -226,7 +233,8 @@
 						"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre de l'Economie, des finances et du commerce ext\u00e9rieur, charg\u00e9 de l'Economie sociale et solidaire et de la consommation",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseiller régional d'Ile-de-France"
+									"type" : "Conseiller régional d'Ile-de-France",
+									"departement" : "78"
 								}
 							],
 						"twitter" : "benoithamon"
@@ -244,10 +252,8 @@
 						"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la ministre des Affaires sociales et de la sant\u00e9, charg\u00e9e des Personnes handicap\u00e9es et de la lutte contre l'exclusion",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseillère générale des Bouches-du-Rhône"
-								},
-								{
-									"type" : "Conseillère régionale de Paca"
+									"type" : "Conseillère générale des Bouches-du-Rhône",
+									"departement" : 13
 								}
 							],
 						"twitter" : "MACarlotti"
@@ -265,20 +271,22 @@
 						"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre du Travail, de l'emploi, de la formation professionnelle et du dialogue social, charg\u00e9 de la Formation professionnelle et de l'apprentissage",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseiller municipal et communautaire de Sonnaz"
+									"type" : "Adjoint au maire de Sonnaz",
+									"departement" : "73"
 								},
 								{
-									"type" : "Conseiller général de Savoie"
+									"type" : "Conseiller général de Savoie",
+									"departement" : "73"
 								}
 							],
-						"twitter" : ""
+						"twitter" : "ThierryRepentin"
 					},
 					{
 						"nom" : "Benguigui",
 						"prenom" : "Yamina",
 						"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s du ministre des Affaires \u00e9trang\u00e8res, charg\u00e9e de la Francophonie",
 						"autres_fonctions" : [],
-						"twitter" : "ThierryRepentin"
+						"twitter" : "YaminaBenguigui"
 					},
 					{
 						"nom" : "Cuvillier",
@@ -307,7 +315,8 @@
 						"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la Ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la Fonction publique, charg\u00e9e de la d\u00e9centralisation",
 						"autres_fonctions" : [
 								{
-									"type" : "Conseillère générale de l'Aveyron"
+									"type" : "Conseillère générale de l'Aveyron",
+									"departement" : "12"
 								}
 							],
 						"twitter" : ""
