@@ -1,0 +1,363 @@
+[
+	{
+		"nom" : "Ayrault",
+		"prenom" : "Jean-Marc",
+		"fonction" : "Premier ministre",
+		"autres_fonctions" : [],
+		"twitter" : "jeanmarcayrault",
+		"facebook" : ""
+	},
+	{
+		"nom" : "Fabius",
+		"prenom" : "Laurent",
+		"fonction" : "ministre des Affaires \u00e9trang\u00e8res",
+		"autres_fonctions" : [],
+		"twitter" : "LaurentFabius",
+		"facebook" :""
+	},
+	{
+		"nom" : "Peillon",
+		"prenom" : "Vincent",
+		"fonction" : "ministre de l'Education nationale",
+		"autres_fonctions" : [],
+		"twitter" : "Vincent_Peillon",
+		"facebook" :""
+	},
+	{
+		"nom" : "Taubira",
+		"prenom" : "Christiane",
+		"fonction" : "Garde des Sceaux, ministre de la Justice",
+		"autres_fonctions" : [],
+		"twitter" : "ChTaubira",
+		"facebook" :""
+	},
+	{
+		"nom" : "Moscovici",
+		"prenom" : "Pierre",
+		"fonction" : "ministre de l'Economie et des Finances",
+		"autres_fonctions" : [],
+		"twitter" : "pierremoscovici",
+		"facebook" :""
+	},
+	{
+		"nom" : "Touraine",
+		"prenom" : "Marisol",
+		"fonction" : "ministre des Affaires sociales et de la sant\u00e9",
+		"autres_fonctions" : [
+				{
+					"fonction" : "Conseillère générale d'Indre-et-Loire"
+				}
+			],
+		"twitter" : "MarisolTouraine",
+		"facebook" :""
+	},
+	{
+		"nom" : "Duflot",
+		"prenom" : "C\u00e9cile",
+		"fonction" : "ministre de l'Egalit\u00e9 des territoires et du logement",
+		"autres_fonctions" : [],
+		"twitter" : "CecileDuflot",
+		"facebook" :""
+	},
+	{
+		"nom" : "Valls",
+		"prenom" : "Manuel",
+		"fonction" : "ministre de l'Int\u00e9rieur",
+		"autres_fonctions" : [],
+		"twitter" : "manuelvalls",
+		"facebook" :""
+	},
+	{
+		"nom" : "Bricq",
+		"prenom" : "Nicole",
+		"fonction" : "ministre du Commerce ext\u00e9rieur",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Montebourg",
+		"prenom" : "Arnaud",
+		"fonction" : "ministre du Redressement productif",
+		"autres_fonctions" : [],
+		"twitter" : "montebourg",
+		"facebook" :""
+	},
+	{
+		"nom" : "Batho",
+		"prenom" : "Delphine",
+		"fonction" : "ministre de l'Ecologie, du d\u00e9veloppement durable et de l'\u00e9nergie",
+		"autres_fonctions" : [],
+		"twitter" : "delphinebatho",
+		"facebook" :""
+	},
+	{
+		"nom" : "Sapin",
+		"prenom" : "Michel",
+		"fonction" : "ministre du Travail, de l'emploi, de la formation professionnelle et du dialogue social",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Le Drian",
+		"prenom" : "Jean-Yves",
+		"fonction" : "ministre de la D\u00e9fense",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseiller régional de Bretagne"
+				}
+			],
+		"twitter" : "JY_LeDrian",
+		"facebook" :""
+	},
+	{
+		"nom" : "Filipetti",
+		"prenom" : "Aur\u00e9lie",
+		"fonction" : "ministre de la Culture et de la communication",
+		"autres_fonctions" : [],
+		"twitter" : "aurelifil",
+		"facebook" :""
+	},
+	{
+		"nom" : "Fioraso",
+		"prenom" : "Genevi\u00e8ve",
+		"fonction" : "ministre de l'Enseignement sup\u00e9rieur et de la recherche",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Vallaud-Belkacem",
+		"prenom" : "Najat",
+		"fonction" : "ministre des Droits des femmes et porte-parole du gouvernement",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseillère municipale et communautaire de Lyon"
+				},
+				{
+					"type" : "Conseillère générale du Rhône"
+				}
+			],
+		"twitter" : "najatvb",
+		"facebook" :""
+	},
+	{
+		"nom" : "Le Foll",
+		"prenom" : "St\u00e9phane",
+		"fonction" : "ministre de l'Agriculture, de l'agroalimentaire et de la forêt",
+		"autres_fonctions" : [],
+		"twitter" : "SLeFoll",
+		"facebook" :""
+	},
+	{
+		"nom" : "Lebranchu",
+		"prenom" : "Marylise",
+		"fonction" : "ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la fonction publique",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseillère régionale de Bretagne"
+				}
+			],
+		"twitter" : "mlebranchu",
+		"facebook" :""
+	},
+	{
+		"nom" : "Lurel",
+		"prenom" : "Victorin",
+		"fonction" : "ministre des Outremer",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseiller régional de Guadeloupe"
+				}
+			],
+		"twitter" : "VictorinLurel",
+		"facebook" :""
+	},
+	{
+		"nom" : "Pinel",
+		"prenom" : "Sylvia",
+		"fonction" : "ministre de l'Artisanat, du commerce et du tourisme",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseillère régionale de Midi-Pyrénées"
+				}
+			],
+		"twitter" : "SylviaPinel",
+		"facebook" :""
+	},
+	{
+		"nom" : "Fourneyron",
+		"prenom" : "Va\u00e9rie",
+		"fonction" : "ministre des Sports, de la jeunesse, de l'\u00e9ducation populaire et de la vie associative",
+		"autres_fonctions" : [],
+		"twitter" : "vfourneyron",
+		"facebook" :""
+	},
+	{
+		"nom" : "Cahuzac",
+		"prenom" : "J\u00e9r\u00f4me",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre de l'Economie, des finances, charg\u00e9 du Budget",
+		"autres_fonctions" : [],
+		"twitter" : "J_Cahuzac",
+		"facebook" :""
+	},
+	{
+		"nom" : "Pau-Langevin",
+		"prenom" : "George",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s du ministre de l'Education nationale, charg\u00e9e de la R\u00e9ussite \u00e9ducative",
+		"autres_fonctions" : [],
+		"twitter" : "Pau_Langevin",
+		"facebook" :""
+	},
+	{
+		"nom" : "Vidalies",
+		"prenom" : "Alain",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du Premier ministre, charg\u00e9 des Relations avec le Parlement",
+		"autres_fonctions" : [],
+		"twitter" : "AVidalies",
+		"facebook" :""
+	},
+	{
+		"nom" : "Lamy",
+		"prenom" : "Fran\u00e7ois",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s de la ministre de l'Egalit\u00e9 des territoires et du logement, charg\u00e9 de la Ville",
+		"autres_fonctions" : [],
+		"twitter" : "lamy_f",
+		"facebook" :""
+	},
+	{
+		"nom" : "Cazeneuve",
+		"prenom" : "Bernard",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du Ministre des Affaires \u00e9trang\u00e8res, charg\u00e9 des Affaires europ\u00e9ennes",
+		"autres_fonctions" : [],
+		"twitter" : "BCazeneuve",
+		"facebook" :""
+	},
+	{
+		"nom" : "Delaunay",
+		"prenom" : "Mich\u00e8le",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la ministre des Affaires sociales et de la Sant\u00e9, charg\u00e9e des Personnes \u00e2g\u00e9es et de l'autonomie",
+		"autres_fonctions" : [],
+		"twitter" : "micheledelaunay",
+		"facebook" :""
+	},
+	{
+		"nom" : "Hamon",
+		"prenom" : "Beno\u00eet",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre de l'Economie, des finances et du commerce ext\u00e9rieur, charg\u00e9 de l'Economie sociale et solidaire et de la consommation",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseiller régional d'Ile-de-France"
+				}
+			],
+		"twitter" : "benoithamon",
+		"facebook" :""
+	},
+	{
+		"nom" : "Bertinotti",
+		"prenom" : "Dominique",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la ministre des Affaires sociales et de la sant\u00e9, charg\u00e9e de la Famille",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Carlotti",
+		"prenom" : "Marie-Arlette",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la ministre des Affaires sociales et de la sant\u00e9, charg\u00e9e des Personnes handicap\u00e9es et de la lutte contre l'exclusion",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseillère générale des Bouches-du-Rhône"
+				},
+				{
+					"type" : "Conseillère régionale de Paca"
+				}
+			],
+		"twitter" : "MACarlotti",
+		"facebook" :""
+	},
+	{
+		"nom" : "Canfin",
+		"prenom" : "Pascal",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre des Affaires \u00e9trang\u00e8res, charg\u00e9 du D\u00e9veloppement",
+		"autres_fonctions" : [],
+		"twitter" : "pcanfin",
+		"facebook" :""
+	},
+	{
+		"nom" : "Repentin",
+		"prenom" : "Thierry",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre du Travail, de l'emploi, de la formation professionnelle et du dialogue social, charg\u00e9 de la Formation professionnelle et de l'apprentissage",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseiller municipal et communautaire de Sonnaz"
+				},
+				{
+					"type" : "Conseiller général de Savoie"
+				}
+			],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Benguigui",
+		"prenom" : "Yamina",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s du ministre des Affaires \u00e9trang\u00e8res, charg\u00e9e de la Francophonie",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Cuvillier",
+		"prenom" : "Fr\u00e9d\u00e9ric",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s de la ministre de l'Ecologie, du d\u00e9veloppement durable et de l'\u00e9nergie, charg\u00e9 des Transports, de la Mer et de la Pêche",
+		"autres_fonctions" : [],
+		"twitter" : "fcuvillier",
+		"facebook" :""
+	},
+	{
+		"nom" : "Pellerin",
+		"prenom" : "Fleur",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s du ministre du Redressement productif, charg\u00e9e des PME, de l'innovation et de l'\u00e9conomie num\u00e9rique",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Arif",
+		"prenom" : "Kader",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du ministre de la D\u00e9fense, charg\u00e9 des Anciens combattants",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Escoffier",
+		"prenom" : "Anne-Marie",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s de la Ministre de la R\u00e9forme de l'Etat, de la d\u00e9centralisation et de la Fonction publique, charg\u00e9e de la d\u00e9centralisation",
+		"autres_fonctions" : [
+				{
+					"type" : "Conseillère générale de l'Aveyron"
+				}
+			],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Garot",
+		"prenom" : "Guillaume",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s de l'Agriculture, de l'agroalimentaire et de la forêt, charg\u00e9 de l'Agroalimentaire",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	},
+	{
+		"nom" : "Conway",
+		"prenom" : "H\u00e9l\u00e8ne",
+		"fonction" : "ministre d\u00e9l\u00e9gu\u00e9e aupr\u00e8s du ministre des Affaires \u00e9trang\u00e8res, charg\u00e9e des Fran\u00e7ais de l'\u00e9tranger",
+		"autres_fonctions" : [],
+		"twitter" : "",
+		"facebook" :""
+	}
+]
