@@ -1,0 +1,145 @@
+body {
+    color: #fff;
+	height: 600px;
+}
+#conteneur {
+	margin: -300px 0 0 -490px;
+	width: 980px;
+	height: 600px;
+	position: absolute;
+	left:50%;
+	top:50%;
+}
+#holder {
+    margin: 0 0 0 30%;
+    width: 510px;
+    height: 555px;
+    position: absolute;
+	z-index:1000;
+}
+
+#copy {
+    font: 300 .6em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+    position: absolute;
+	float:left;
+	width:550px;
+	margin-top:600px;
+	color: #777;
+	text-align: center;
+	margin-left: 300px;
+}
+#copy a {
+    color: #599;
+}
+#legende {
+	margin-top:345px;
+	position: absolute;
+	width:100px;
+	margin-left:0%;
+	color:#333;
+	font: 300 0.8em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+#divdedescription {
+	position: absolute;
+	float: left;
+	text-align: justify;
+	width: 29%;
+	color:#333;
+	font: 300 0.8em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+#details {
+	position: absolute;
+	float: left;
+	text-align: right;
+	width: 284px;
+	margin-top:340px;
+	color:#333;
+	font: 300 0.8em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+h5 {
+	font: 300 2em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+	text-align: right;
+	color: rgb(103,94,92);
+	margin-top:0px;
+}
+
+#logo {
+	font: 300 2em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+	text-align: right;
+	color: #999;
+}
+#logoimg {
+	margin-left:150px;
+	width:130px;
+	height:75px;
+	background-image:url('quicumule.png');
+	background-size: 130px 75px;
+}
+
+.vert {background-color: rgb(216,210,177); color: rgb(216,210,177); }
+.bleu {background-color: rgb(137,156,195); color: rgb(137,156,195); }
+.rouge {background-color: rgb(227,161,117); color: rgb(227,161,117); }
+
+#legende {
+	width: 510px;
+	text-align: left;
+	margin-top:365px;
+}
+
+#legende p {
+	text-align:left;
+}
+
+#vert {
+	margin-left: 0px;
+	width: 120px;
+}
+#bleu {
+	margin-left: 0px;
+	width:140px;
+}
+#rouge {
+	margin-left: 0px;
+	width:105px;
+}
+dl {
+position:relative;
+}
+dd {
+height: 15px;
+padding-left: 10px;
+}
+dt {
+width: 40px;
+height: 15px;
+float: left;
+overflow: hidden;
+}
+#details h5{
+	margin-bottom: 10px;
+	text-align:right;
+}
+#footer {
+	text-align: center;
+	margin-left: 300px;
+	margin-top: 620px;
+	padding-top: 10px;
+	width:600px;
+}
+#echelle {
+	width:10px;
+	height: 555px;
+	margin-left:850px;
+	float:left;
+}
+.fb-like {
+	margin-left: 25px;
+}
+.twitter-follow-button, .twitter-share-button {
+	margin-top: 2px;
+	vertical-align:top;
+}
+.twitter-follow-button {
+	margin-left: 25px;
+}

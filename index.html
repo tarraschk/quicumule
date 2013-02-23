@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Qui cumule ? - Protégeons notre démocratie</title>
+    <link rel="stylesheet" href="democ.css"media="screen">
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32361529-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	<META NAME="keywords" CONTENT="cumul, mandat, datavision, assemblée, nationale, députés">
+	<META NAME="description" CONTENT="Qui Cumule ? - Protégeons notre démocratie">
+	<META NAME="author" CONTENT="Maxime Alay-Eddine">
+	<META NAME="copyright" CONTENT="Maxime Alay-Eddine - Tous Droits Réservés">
+	<META NAME="robots" CONTENT="FOLLOW,INDEX">
+</head>
+<body>
+	<div id="conteneur">
+    	<div id="holder"></div>
+		<div id="legend"></div>
+		<div id="echelle"></div>
+		<div id="divdedescription"><div id="logo"><div id="logoimg"></div></div><br/>Certains élus sont à la fois maire, député, conseiller général, et conseiller régional.<br/><br/>
+		Cela s'appelle le cumul des mandats, et permet de gagner plus d'argent. Mais peut-on seulement prétendre représenter le peuple à mi-temps ?
+		Qui sont ces mauvais élèves ? Quelles sont les régions les plus touchées ?<br/><br/>
+				Cette carte représente les cumuls des mandats de nos députés, répartis par départements.<br/><br/>
+				Profitons de ces élections pour réagir.<br/>Protégeons notre démocratie.</div>
+		<div id="legende">
+			<p>Député(s) cumulant un mandat:</p>
+				<div id="vert">
+				<dl>
+					<dt class="vert">Vert</dt>
+					<dd>Communal</dd>
+				</dl>
+				</div>
+				<div id="bleu">
+				<dl>
+					<dt class="bleu">Bleu</dt>
+					<dd>Départemental</dd>
+				</dl>
+				</div>
+				<div id="rouge">
+				<dl id="rouge">
+					<dt class="rouge">Rouge</dt>
+					<dd>Régional</dd>
+				</dl>
+				</div>
+		</div>
+		<div id="details">
+			<h5>Statistiques</h5>
+			<div id="stats"></div>
+			<div id="txt"></div>
+		</div>
+    	<div id="copy">Réalisé par <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.quicumule.fr%2F&region=follow_link&screen_name=tarraschk&source=followbutton&variant=2.0">@tarraschk</a> et Exspecto. 
+			Tous droits réservés. Sources (Juin 2012) : <a href="http://www.assemblee-nationale.fr/qui/index_autre.asp">Assemblée Nationale</a>, 
+			<a href="http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement.asp">INSEE</a>.
+		</div>
+		<div id="footer">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tne.li/KWdsNA" data-text="&quot;Cumul des mandats : quels sont les départements les plus touchés ?&quot; #DataVision #QuiCumule" data-lang="fr" data-count="none">Tweeter</a>
+			<a href="https://twitter.com/tarraschk" class="twitter-follow-button" data-show-count="false" data-lang="fr">Suivre @tarraschk</a>
+			<div class="fb-like" data-href="http://www.quicumule.fr" data-send="false" data-width="300" data-show-faces="false" data-font="arial"></div>
+			<div id="fb-root"></div>
+		</div>
+    </div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script src="raphael.js"></script>
+    <script src="jquery.js"></script>
+	<script type="text/javascript" src="generatec.php"></script>
+</body>
+</html>
