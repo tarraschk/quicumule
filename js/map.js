@@ -1,4 +1,8 @@
 $(function() {
+    function capitaliseFirstLetter(string){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
     var deputes, senateurs, ministres;
     function getCumualardsByDept(departement_num) {
         var cumulards = [];
@@ -542,10 +546,11 @@ $(function() {
                                 if(val.twitter !== ''){
                                     twitter = '<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
                                 }
+                                var sAutresfonctons = autresFonctions.join('<br />');
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + twitter + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + ', qui cumule :<br />' + autresFonctions.join('<br />') + '</span>';
+                                html += '<span class="person_fonction">' + val.fonction + ', qui cumule :<br />' + capitaliseFirstLetter(sAutresfonctons) + '</span>';
                                 html += '</li>';
                             });
                             html+="<br />";

@@ -33,7 +33,7 @@ function listing_senateurs_cumulard() {
             $autres_fonctions = array();
             foreach($senateur_objet['autres_mandats'] as $key => $value){
                 $values = explode('/', $value['mandat']);
-                $mandat = $values[1] . ', ' . trim($values[0]);  
+                $mandat = trim($values[1]) . ', ' . trim($values[0]);  
                 $autres_fonctions[] = array('mandat' => $mandat);
             }
             $senateur = [
