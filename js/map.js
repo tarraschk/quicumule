@@ -477,6 +477,9 @@ $(function() {
                 }
             };
             var max = 0;
+            var palier1 = 2;
+            var palier2 = 6;
+            var palier3 = 28;
             for (var dpt in carte) {
                 var dpt_num = dpt;
                 var temp = rsr.path(carte[dpt].path);
@@ -484,14 +487,14 @@ $(function() {
                 nums[temp.id] = dpt;
                 somme[temp.id] = getCumualardsByDept(dpt_num).length;
                 maxCumuls = Math.max(somme[temp.id], maxCumuls);
-                if (somme[temp.id] < 3) {
-                    tempColor = 'rgb(' + (186 - (186 - 172) * somme[temp.id] / 2) + ',' + (183 - (183 - 161) * somme[temp.id] / 2) + ',' + (194 - (194 - 143) * somme[temp.id] / 2) + ')';
+                if (somme[temp.id] < (palier1 + 1)) {
+                    tempColor = 'rgb(' + (186 - (186 - 172) * somme[temp.id] / palier1) + ',' + (183 - (183 - 161) * somme[temp.id] / palier1) + ',' + (194 - (194 - 143) * somme[temp.id] / palier1) + ')';
                 }
-                else if (somme[temp.id] < 7) {
-                    tempColor = 'rgb(' + (172 - (172 - 78) * somme[temp.id] / 6) + ',' + (161 - (161 - 106) * somme[temp.id] / 6) + ',' + (143 - (143 - 129) * somme[temp.id] / 6) + ')';
+                else if (somme[temp.id] < (palier2 + 1)) {
+                    tempColor = 'rgb(' + (172 - (172 - 78) * somme[temp.id] / palier2) + ',' + (161 - (161 - 106) * somme[temp.id] / palier2) + ',' + (143 - (143 - 129) * somme[temp.id] / palier2) + ')';
                 }
                 else {
-                    tempColor = 'rgb(' + (78 - (78 - 47) * somme[temp.id] / 22) + ',' + (106 - (106 - 67) * somme[temp.id] / 22) + ',' + (129 - (129 - 88) * somme[temp.id] / 22) + ')';
+                    tempColor = 'rgb(' + (78 - (78 - 47) * somme[temp.id] / palier3) + ',' + (106 - (106 - 67) * somme[temp.id] / palier3) + ',' + (129 - (129 - 88) * somme[temp.id] / palier3) + ')';
                 }
                 couleurDpt[temp.id] = {
                     fill: tempColor
@@ -503,7 +506,7 @@ $(function() {
                         .hover(function() {
                             if (this != lastSelected) {
                                 this.animate({
-                                    fill: 'rgb(155,141,138)'
+                                    fill: 'rgb(170,130,0)'
                                 }, 10);
                             }
                         }, function() {
@@ -535,13 +538,13 @@ $(function() {
                                     if(val.autres_fonctions[i].mandat === undefined) continue;
                                     autresFonctions.push(val.autres_fonctions[i].mandat);
                                 }
-
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
                                 html += '<span class="person_fonction">' + val.fonction + ' et cumule :' + autresFonctions.join('/') + '</span>';
                                 html += '</li>';
                             });
+                            html+="<br />";
                             $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul style="">' + html + '</ul>');
 
                         }
@@ -553,9 +556,9 @@ $(function() {
             }
 
             var echelle = rsr.rect(w - 20, 10, 5, h - 20);
-            rsr.text(w - 5, 10, maxCumuls).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-            rsr.text(w - 5, 195, 6).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-            rsr.text(w - 5, 380, 2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 10, palier3).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 195, palier2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 380, palier1).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
             rsr.text(w - 5, 545, 0).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
             rsr.text(w - 5, h / 2, "Cumuls dans le département").rotate(90).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10});
             echelle.attr({
