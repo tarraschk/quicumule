@@ -544,12 +544,13 @@ $(function() {
                                 //}
 
                                 html += '<div style="height:60px">';
-                                html += '<span class="thumbnail_person" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
+                                html += '<span class="image-rounded" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
                                 html += '<span class="person_fonction">' + val.fonction + '</span><br />';
                                 html += '<span class="person_cumuls">' + autresFonctions.join(' ') + '</span>';
                                 html += '</div>';
                             });
+                            html+="<br />";
                             $('#stats').html(html);
 
                         }
