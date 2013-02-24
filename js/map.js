@@ -555,7 +555,7 @@ $(function() {
                                 }
                                 var twitter = '';
                                 if(val.twitter !== ''){
-                                    twitter = '<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?screen_name=' + val.twitter.split('@')[1] + '" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
                                 }
                                 html += '<img src="'+lienImage+'" class="hidden-phone pull-left img-rounded media-object" style="width:48px" />';
                                 html += '<div class="media-body"><strong class="media-heading">' + val.prenom + ' ' + val.nom + '</strong><div class="pull-right " style="margin-right:0px;">'+twitter+'</div>';
