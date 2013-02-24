@@ -1,0 +1,24 @@
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+    border: black 1px solid;
+}
+
+html, body {
+    font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+    color: #333;
+    height: 100%;
+}
+h1, h2, h3, h4, h5 {
+    color: rgb(103,94,92);
+    font-weight: normal;
+}
+#mapholder {
+}
+.fill {
+    height: 100%;
+}
+.fill90 {
+    height: 90%;
+}
+.voffset5 {
+    margin-top: 5%;
+}
