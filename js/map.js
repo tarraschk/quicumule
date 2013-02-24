@@ -528,7 +528,6 @@ $(function() {
                             var dept_num = nums[this.id];
                             var cumulards = getCumualardsByDept(dept_num);
                             var html = '';
-                            html+='<strong class="">'+carte[nums[this.id]].nom+'</strong>';
                             $.each(cumulards, function(key, val) {
                                 var nAutresFonctions = val.autres_fonctions.length;
                                 var autresFonctions = [];
@@ -538,13 +537,13 @@ $(function() {
                                     autresFonctions.push(mandat);
                                 }
 
-                                html += '<div style="height:60px">';
-                                html += '<span class="thumbnail_person" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
+                                html += '<li class="person_info">';
+                                html += '<img src="" class="thumbnail_person" />';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + '</span> et ' + autresFonctions.join('/');
-                                html += '</div>';
+                                html += '<span class="person_fonction">' + val.fonction + ' et ' + autresFonctions.join('/') + '</span>';
+                                html += '</li>';
                             });
-                            $('#stats').html(html);
+                            $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul style="">' + html + '</ul>');
 
                         }
                 )
