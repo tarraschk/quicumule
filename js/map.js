@@ -497,22 +497,29 @@ $(function () {
     			temp.data('selected', false);
     			temp
     			.hover(function(){
-    			 this.animate({
+    			 if(this != lastSelected) {
+    			     this.animate({
     					fill: 'rgb(155,141,138)'
-    				}, 10);
+    				 }, 10);
+                 }
     			}, function(){
-    				this.animate({
-    					fill: couleurDpt[this.id].fill
-    				}, 10);
+    			     if(this != lastSelected) {
+        				this.animate({
+        					fill: couleurDpt[this.id].fill
+        				}, 10);
+                     }
     			})
     			.click(function(){
     			 if(lastSelected != null) {
         			 lastSelected.data('selected', false);
+        			 lastSelected.animate({
+    					fill: couleurDpt[this.id].fill
+    				 }, 10);
     			 }
         		 lastSelected = this;
     			 this.data('selected', true);
     			 this.animate({
-    					fill: 'rgb(0,0,0)'
+    					fill: 'rgb(200,200,200)'
     				}, 10);
     			 }
     			)
