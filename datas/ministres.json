@@ -1,6 +1,6 @@
 {
 	"_licence" : "This database is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/",
-	"_authors" : "Maxime ALAY-EDDINE & Jean-Alain R\u00e9"
+	"_authors" : "Maxime ALAY-EDDINE & Jean-Alain R\u00e9",
 	"_sources" : "http://www.gouvernement.fr/gouvernement/composition-du-gouvernement and public lists from @samuellaurent",
 	"_update" : "2013-02-23",
 	"values" : [
