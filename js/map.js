@@ -555,7 +555,12 @@ $(function() {
                                 }
                                 var twitter = '';
                                 if(val.twitter !== ''){
-                                    twitter = '<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
+                                    var phrases =   [
+                                                     "Peut-on représenter le peuple à mi-temps %3F",
+                                                     "Comment justifiez-vous votre cumul de mandats %3F"
+                                                    ];
+                                    var phrase = phrases[Math.floor(Math.random()*phrases.length)];
+                                    twitter = '<a href="https://twitter.com/intent/tweet?screen_name='+val.twitter+'&hashtags=Cumulards&text='+phrase+' - http://www.quicumule.fr" class="twitter-share-button" data-lang="fr" data-count="horizontal" data-size="medium">' + val.twitter + '</a>';
                                 }
                                 html += '<img src="'+lienImage+'" class="hidden-phone pull-left img-rounded media-object" style="width:48px" />';
                                 html += '<div class="media-body"><strong class="media-heading">' + val.prenom + ' ' + val.nom + '</strong><div class="pull-right " style="margin-right:0px;">'+twitter+'</div>';
@@ -564,7 +569,7 @@ $(function() {
                             });
                             html+="<br />";
                             $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul class="media-list">' + html + '</ul>');
-
+                            $.getScript("http://platform.twitter.com/widgets.js");
                         }
                 )
             }
