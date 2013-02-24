@@ -509,7 +509,7 @@ $(function() {
                         .hover(function() {
                             if (this != lastSelected) {
                                 this.animate({
-                                    fill: 'rgb(170,130,0)'
+                                    fill: 'rgb(227,161,117)'
                                 }, 10);
                             }
                         }, function() {
@@ -529,7 +529,7 @@ $(function() {
                             lastSelected = this;
                             this.data('selected', true);
                             this.animate({
-                                fill: 'rgb(220,150,0)'
+                                fill: 'rgb(230,131,027)'
                             }, 10);
                             var dept_num = nums[this.id];
                             var cumulards = getCumualardsByDept(dept_num);
@@ -539,7 +539,7 @@ $(function() {
                                 var autresFonctions = [];
                                 for(var i = 0; i < nAutresFonctions; i++){
                                     if(val.autres_fonctions[i].mandat === undefined) continue;
-                                    autresFonctions.push(val.autres_fonctions[i].mandat);
+                                    autresFonctions.push(capitaliseFirstLetter(val.autres_fonctions[i].mandat));
                                 }
                                 html += '<li class="media person_info">';
                                 var lienImage = "";
@@ -564,7 +564,7 @@ $(function() {
                                 }
                                 html += '<img src="'+lienImage+'" class="hidden-phone pull-left img-rounded media-object" style="width:48px" />';
                                 html += '<div class="media-body"><strong class="media-heading">' + val.prenom + ' ' + val.nom + '</strong><div class="pull-right " style="margin-right:0px;">'+twitter+'</div>';
-                                html += '<span class=""><p>' + val.fonction + ', qui cumule :</p>' + capitaliseFirstLetter(autresFonctions.join('<br />')) + '</span>';
+                                html += '<span class=""><p>' + val.fonction + ', qui cumule :</p>' + '<span style="font-size:0.8em;">'+capitaliseFirstLetter(autresFonctions.join('<br />')).split('/').join('') + '</span></span>';
                                 html += '</div></li>';
                             });
                             html+="<br />";
