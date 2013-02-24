@@ -40,20 +40,11 @@ $(function() {
             var h = 555;
             var maxCumuls = 0;
             var rsr = Raphael("mapholder", w, h);
-    		var echelle = rsr.rect(w-20,10,5,h-20);
-	       	rsr.text(w-5, 10, 22).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-    		rsr.text(w-5, 195, 6).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-    		rsr.text(w-5, 380, 2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-		    rsr.text(w-5, 545, 0).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-		    rsr.text(w-5, h/2, "Cumuls dans le département").rotate(90).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10});
+
             rsr.setViewBox(0, 0, w, h, true);
             rsr.setSize('100%', '100%');
             //var rsrStats = Raphael("stats",284,100);
-    		echelle.attr({
-    			"fill": "90-rgb(186,183,194)-rgb(172,161,143):33-rgb(78,106,129):66-rgb(47,67,88)",
-    			"stroke" : 'rgb(255,255,255)',
-    			"opacity" : 0.8
-    		});
+
             var attributsLigne = {
                 stroke: '#777777',
                 'stroke-width': 1,
@@ -485,12 +476,14 @@ $(function() {
                     path: "M32.914,90.406 L70.041,90.406 L92.041,67.094 L92.041,24.022"
                 }
             };
+            var max = 0;
             for (var dpt in carte) {
                 var dpt_num = dpt;
                 var temp = rsr.path(carte[dpt].path);
                 noms[temp.id] = carte[dpt].nom;
                 nums[temp.id] = dpt;
                 somme[temp.id] = getCumualardsByDept(dpt_num).length;
+                maxCumuls = Math.max(somme[temp.id], maxCumuls);
                 if (somme[temp.id] < 3) {
                     tempColor = 'rgb(' + (186 - (186 - 172) * somme[temp.id] / 2) + ',' + (183 - (183 - 161) * somme[temp.id] / 2) + ',' + (194 - (194 - 143) * somme[temp.id] / 2) + ')';
                 }
@@ -538,16 +531,17 @@ $(function() {
                             html+='<strong class="">'+carte[nums[this.id]].nom+'</strong>';
                             $.each(cumulards, function(key, val) {
                                 var nAutresFonctions = val.autres_fonctions.length;
-                                var autresFonctions = ['autres'];
-                                //for(var i = 0; i < nAutresFonctions; i++){
-                                //    autresFonctions.push(val.autres_fonctions[i].mandat)
-                                //}
+                                var autresFonctions = [];
+                                for(var i = 0; i < nAutresFonctions; i++){
+                                    if(val.autres_fonctions[i].mandat === undefined) continue;
+                                    var mandat = val.autres_fonctions[i].mandat.split('/')[1];
+                                    autresFonctions.push(mandat);
+                                }
 
                                 html += '<div style="height:60px">';
                                 html += '<span class="thumbnail_person" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + '</span><br />';
-                                html += '<span class="person_cumuls">' + autresFonctions.join(' ') + '</span>';
+                                html += '<span class="person_fonction">' + val.fonction + '</span> et ' + autresFonctions.join('/');
                                 html += '</div>';
                             });
                             $('#stats').html(html);
@@ -560,7 +554,17 @@ $(function() {
                 temp.attr(attributsLigne);
             }
 
-
+            var echelle = rsr.rect(w - 20, 10, 5, h - 20);
+            rsr.text(w - 5, 10, maxCumuls).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 195, 6).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 380, 2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, 545, 0).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+            rsr.text(w - 5, h / 2, "Cumuls dans le département").rotate(90).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10});
+            echelle.attr({
+                "fill": "90-rgb(186,183,194)-rgb(172,161,143):33-rgb(78,106,129):66-rgb(47,67,88)",
+                "stroke": 'rgb(255,255,255)',
+                "opacity": 0.8
+            });
 
 
         });
