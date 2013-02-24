@@ -29,6 +29,16 @@ function listing_deputes_cumulard() {
         $depute_objet = $value['depute'];
 
         if (intval($depute_objet['nb_mandats']) > 1) { //uniquement les députés ayant plus d'un mandat
+            $autres_fonctions = array();
+            foreach($depute_objet['autres_mandats'] as $key => $value){
+                $values = explode('/', $value['mandat']);
+                $mandat = $values[2];
+                
+                if(trim($values[1]) != ''){
+                    $mandat .= ' (' . trim($values[1]) . ')';
+                }
+                $autres_fonctions[] = array('mandat' => $mandat);
+            }
             $depute = [
                 'nom' => $depute_objet['nom_de_famille'],
                 'prenom' => $depute_objet['prenom'],
@@ -36,9 +46,8 @@ function listing_deputes_cumulard() {
                 'twitter' => '',
                 'site_web' => $depute_objet['sites_web'],
                 'departement_num' => $depute_objet['num_deptmt'],
-                'autres_fonctions' => $depute_objet['autres_mandats']
+                'autres_fonctions' => $autres_fonctions
             ];
-
             $quicumules_array[] = $depute;
         }
     }

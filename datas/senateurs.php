@@ -26,22 +26,30 @@ function listing_senateurs_cumulard() {
     
     
     foreach ($deputes_array['senateurs'] as $key => $value) {
-        $depute_objet = $value['senateur'];
-
-        if (intval($depute_objet['nb_mandats']) > 1) { //uniquement les députés ayant plus d'un mandat
+        $senateur_objet = $value['senateur'];
+        
+            
+        if (intval($senateur_objet['nb_mandats']) > 1) { //uniquement les députés ayant plus d'un mandat
+            $autres_fonctions = array();
+            foreach($senateur_objet['autres_mandats'] as $key => $value){
+                $values = explode('/', $value['mandat']);
+                $mandat = $values[1] . ' (' . trim($values[0]) . ')';  
+                $autres_fonctions[] = array('mandat' => $mandat);
+            }
             $senateur = [
-                'nom' => $depute_objet['nom_de_famille'],
-                'prenom' => $depute_objet['prenom'],
+                'nom' => $senateur_objet['nom_de_famille'],
+                'prenom' => $senateur_objet['prenom'],
                 'fonction' => 'Sénateur',
                 'twitter' => '',
-                'site_web' => $depute_objet['sites_web'],
-                'departement_num' => $depute_objet['num_deptmt'],
-                'autres_fonctions' => $depute_objet['autres_mandats']
+                'site_web' => $senateur_objet['sites_web'],
+                'departement_num' => $senateur_objet['num_deptmt'],
+                'autres_fonctions' => $autres_fonctions
             ];
 
             $quicumules_array[] = $senateur;
         }
     }
+    print_r($quicumules_array);
     return $quicumules_array;
 }
 

@@ -533,14 +533,13 @@ $(function() {
                                 var autresFonctions = [];
                                 for(var i = 0; i < nAutresFonctions; i++){
                                     if(val.autres_fonctions[i].mandat === undefined) continue;
-                                    var mandat = val.autres_fonctions[i].mandat.split('/')[1];
-                                    autresFonctions.push(mandat);
+                                    autresFonctions.push(val.autres_fonctions[i].mandat);
                                 }
 
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + ' et ' + autresFonctions.join('/') + '</span>';
+                                html += '<span class="person_fonction">' + val.fonction + ' et cumule :' + autresFonctions.join('/') + '</span>';
                                 html += '</li>';
                             });
                             $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul style="">' + html + '</ul>');
