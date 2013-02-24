@@ -2,7 +2,6 @@ $(function() {
     function capitaliseFirstLetter(string){
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    
     var deputes, senateurs, ministres;
     function getCumualardsByDept(departement_num) {
         var cumulards = [];
@@ -524,7 +523,7 @@ $(function() {
                             if (lastSelected != null) {
                                 lastSelected.data('selected', false);
                                 lastSelected.animate({
-                                    fill: couleurDpt[this.id].fill
+                                    fill: couleurDpt[lastSelected.id].fill
                                 }, 10);
                             }
                             lastSelected = this;
@@ -542,19 +541,29 @@ $(function() {
                                     if(val.autres_fonctions[i].mandat === undefined) continue;
                                     autresFonctions.push(val.autres_fonctions[i].mandat);
                                 }
+                                html += '<li class="media person_info">';
+                                var lienImage = "";
+                                var tailleImage = 80;
+                                if(val.fonction === "Député") {
+                                    lienImage += "http://www.nosdeputes.fr/depute/photo/"+val.prenom.split(' ').join('-')+'-'+val.nom.split(' ').join('-')+'/'+tailleImage;
+                                }
+                                else if (val.fonction === "Sénateur") {
+                                    lienImage += "http://www.nossenateurs.fr/senateur/photo/"+val.prenom.split(' ').join('-')+'-'+val.nom.split(' ').join('-')+'/'+tailleImage;
+                                }
+                                else {
+                                    lienImage += "./img/ministres/"+val.prenom.split(' ').join('-')+'_'+val.nom.split(' ').join('')+".jpg";
+                                }
                                 var twitter = '';
                                 if(val.twitter !== ''){
                                     twitter = '<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
                                 }
-                                var sAutresfonctons = autresFonctions.join('<br />');
-                                html += '<li class="person_info">';
-                                html += '<img src="" class="thumbnail_person" />';
-                                html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + twitter + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + ', qui cumule :<br />' + capitaliseFirstLetter(sAutresfonctons) + '</span>';
-                                html += '</li>';
+                                html += '<img src="'+lienImage+'" class="hidden-phone pull-left img-rounded media-object" style="width:48px" />';
+                                html += '<div class="media-body"><strong class="media-heading">' + val.prenom + ' ' + val.nom + '</strong><div class="pull-right " style="margin-right:0px;">'+twitter+'</div>';
+                                html += '<span class=""><p>' + val.fonction + ', qui cumule :</p>' + capitaliseFirstLetter(autresFonctions.join('<br />')) + '</span>';
+                                html += '</div></li>';
                             });
                             html+="<br />";
-                            $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul style="">' + html + '</ul>');
+                            $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul class="media-list">' + html + '</ul>');
 
                         }
                 )
@@ -580,4 +589,5 @@ $(function() {
         });
     }
     showMap();
+    $("#btn_sources").popover();
 });

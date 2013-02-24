@@ -1,8 +1,9 @@
-/*
-.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
-    border: black 1px solid;
+
+
+body, .container, .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+    border: white 1px solid;
 }
-*/
+
 
 html, body {
     font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
@@ -28,15 +29,17 @@ a, a:hover {
     color: #333;
 }
 .thumbnail_person{
+/*
     border-radius: 3px 3px 3px 3px;
     background-color: #ccc;
     width: 50px;
     height: 50px;
     margin: 0 10px 0 0;
     float: left;
+*/
 }
 .person_name{
-    font-weight: bold;
+/*     font-weight: bold; */
 }
 
 .person_info{
@@ -47,4 +50,8 @@ a, a:hover {
     padding: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
     list-style:none outside none
+}
+
+.container {
+    margin-top: 20px;
 }
