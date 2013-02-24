@@ -1,4 +1,4 @@
-function getCumualards(departement_num){s
+function getCumualards(departement_num){
     $.when($.getJSON('datas/deputes.json'), $.getJSON('datas/senateurs.json'), $.getJSON('datas/ministres_tries.json')).done(function(data1, data2, data3) {
         //Quand les 3 requêtes sont terminés
         var cumulards = [];
