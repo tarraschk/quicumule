@@ -25,6 +25,7 @@ $(function () {
 		var somme = new Array();
 		var tempColor = {};
 		var carte = {};
+		var lastSelected = null;
 
 		carte['2A'] = {
 			nom: 'Corse-du-Sud',
@@ -438,7 +439,8 @@ $(function () {
 			var temp = rsr.path(carte[dpt].path);
 			noms[temp.id] = carte[dpt].nom;
 			nums[temp.id] = dpt;
-			somme[temp.id] = 0;
+			/*
+            somme[temp.id] = 0;
 			if(somme[temp.id] < 3) {
 				tempColor = 'rgb('+(186-(186-172)*somme[temp.id]/2)+','+(183-(183-161)*somme[temp.id]/2)+','+(194-(194-143)*somme[temp.id]/2)+')';
 			}
@@ -448,17 +450,35 @@ $(function () {
 			else {
 				tempColor = 'rgb('+(78-(78-47)*somme[temp.id]/22)+','+(106-(106-67)*somme[temp.id]/22)+','+(129-(129-88)*somme[temp.id]/22)+')';
 			}
+			*/
+            tempColor = 'rgb(69,63,61)';
 			couleurDpt[temp.id] = {
 				fill: tempColor
 			};
 			temp.attr(attributsDpt);
 			temp.attr(couleurDpt[temp.id]);
+			temp.data('selected', false);
 			temp
 			.hover(function(){
+			 this.animate({
+					fill: 'rgb(155,141,138)'
+				}, 10);
 			}, function(){
 				this.animate({
+					fill: couleurDpt[this.id].fill
 				}, 10);
 			})
+			.click(function(){
+			 if(lastSelected != null) {
+    			 lastSelected.data('selected', false);
+			 }
+    		 lastSelected = this;
+			 this.data('selected', true);
+			 this.animate({
+					fill: 'rgb(0,0,0)'
+				}, 10);
+			 }
+			)
 		}
 		for (var lisvg in lignes) {
 			var temp = rsr.path(lignes[lisvg].path);
