@@ -32,10 +32,12 @@ function listing_deputes_cumulard() {
             $autres_fonctions = array();
             foreach($depute_objet['autres_mandats'] as $key => $value){
                 $values = explode('/', $value['mandat']);
-                $mandat = $values[2];
+                $mandat = '';
                 
                 if(trim($values[1]) != ''){
-                    $mandat .= ' (' . trim($values[1]) . ')';
+                    $mandat .= trim($values[1])  . ', ' .trim($values[0]);
+                }else{
+                    $mandat .= trim($values[2]) . ', ' .trim($values[0]);
                 }
                 $autres_fonctions[] = array('mandat' => $mandat);
             }

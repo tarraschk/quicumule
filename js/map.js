@@ -541,7 +541,7 @@ $(function() {
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
                                 html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
-                                html += '<span class="person_fonction">' + val.fonction + ' et cumule :' + autresFonctions.join('/') + '</span>';
+                                html += '<span class="person_fonction">' + val.fonction + ', qui cumule :<br />' + autresFonctions.join('<br />') + '</span>';
                                 html += '</li>';
                             });
                             html+="<br />";
