@@ -1,6 +1,8 @@
+/*
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
     border: black 1px solid;
 }
+*/
 
 html, body {
     font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
@@ -21,7 +23,4 @@ h1, h2, h3, h4, h5 {
 }
 .voffset5 {
     margin-top: 5%;
-}
-#mapholder {
-    border: red 1px solid;
 }

@@ -36,11 +36,24 @@ $(function() {
             senateurs = data2[0].values;
             ministres = data3[0].values;
 
-            var w = 510;
+            var w = 550;
             var h = 555;
+            var maxCumuls = 0;
             var rsr = Raphael("mapholder", w, h);
+    		var echelle = rsr.rect(w-20,10,5,h-20);
+	       	rsr.text(w-5, 10, 22).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+    		rsr.text(w-5, 195, 6).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+    		rsr.text(w-5, 380, 2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+		    rsr.text(w-5, 545, 0).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
+		    rsr.text(w-5, h/2, "Cumuls dans le département").rotate(90).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10});
             rsr.setViewBox(0, 0, w, h, true);
             rsr.setSize('100%', '100%');
+            //var rsrStats = Raphael("stats",284,100);
+    		echelle.attr({
+    			"fill": "90-rgb(186,183,194)-rgb(172,161,143):33-rgb(78,106,129):66-rgb(47,67,88)",
+    			"stroke" : 'rgb(255,255,255)',
+    			"opacity" : 0.8
+    		});
             var attributsLigne = {
                 stroke: '#777777',
                 'stroke-width': 1,
@@ -478,7 +491,6 @@ $(function() {
                 noms[temp.id] = carte[dpt].nom;
                 nums[temp.id] = dpt;
                 somme[temp.id] = getCumualardsByDept(dpt_num).length;
-
                 if (somme[temp.id] < 3) {
                     tempColor = 'rgb(' + (186 - (186 - 172) * somme[temp.id] / 2) + ',' + (183 - (183 - 161) * somme[temp.id] / 2) + ',' + (194 - (194 - 143) * somme[temp.id] / 2) + ')';
                 }
@@ -488,7 +500,6 @@ $(function() {
                 else {
                     tempColor = 'rgb(' + (78 - (78 - 47) * somme[temp.id] / 22) + ',' + (106 - (106 - 67) * somme[temp.id] / 22) + ',' + (129 - (129 - 88) * somme[temp.id] / 22) + ')';
                 }
-
                 couleurDpt[temp.id] = {
                     fill: tempColor
                 };
@@ -497,51 +508,51 @@ $(function() {
                 temp.data('selected', false);
                 temp
                         .hover(function() {
-                    if (this != lastSelected) {
-                        this.animate({
-                            fill: 'rgb(155,141,138)'
-                        }, 10);
-                    }
-                }, function() {
-                    if (this != lastSelected) {
-                        this.animate({
-                            fill: couleurDpt[this.id].fill
-                        }, 10);
-                    }
-                })
+                            if (this != lastSelected) {
+                                this.animate({
+                                    fill: 'rgb(155,141,138)'
+                                }, 10);
+                            }
+                        }, function() {
+                            if (this != lastSelected) {
+                                this.animate({
+                                    fill: couleurDpt[this.id].fill
+                                }, 10);
+                            }
+                        })
                         .click(function() {
-                    if (lastSelected != null) {
-                        lastSelected.data('selected', false);
-                        lastSelected.animate({
-                            fill: couleurDpt[this.id].fill
-                        }, 10);
-                    }
-                    lastSelected = this;
-                    this.data('selected', true);
-                    this.animate({
-                        fill: 'rgb(200,200,200)'
-                    }, 10);
-                    var dept_num = nums[this.id];
-                    var cumulards = getCumualardsByDept(dept_num);
-                    var html = '';
+                            if (lastSelected != null) {
+                                lastSelected.data('selected', false);
+                                lastSelected.animate({
+                                    fill: couleurDpt[this.id].fill
+                                }, 10);
+                            }
+                            lastSelected = this;
+                            this.data('selected', true);
+                            this.animate({
+                                fill: 'rgb(220,150,0)'
+                            }, 10);
+                            var dept_num = nums[this.id];
+                            var cumulards = getCumualardsByDept(dept_num);
+                            var html = '';
+                            html+='<strong class="">'+carte[nums[this.id]].nom+'</strong>';
+                            $.each(cumulards, function(key, val) {
+                                var nAutresFonctions = val.autres_fonctions.length;
+                                var autresFonctions = ['autres'];
+                                //for(var i = 0; i < nAutresFonctions; i++){
+                                //    autresFonctions.push(val.autres_fonctions[i].mandat)
+                                //}
 
-                    $.each(cumulards, function(key, val) {
-                        var nAutresFonctions = val.autres_fonctions.length;
-                        var autresFonctions = ['autres'];
-                        //for(var i = 0; i < nAutresFonctions; i++){
-                        //    autresFonctions.push(val.autres_fonctions[i].mandat)
-                        //}
+                                html += '<div style="height:60px">';
+                                html += '<span class="thumbnail_person" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
+                                html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
+                                html += '<span class="person_fonction">' + val.fonction + '</span><br />';
+                                html += '<span class="person_cumuls">' + autresFonctions.join(' ') + '</span>';
+                                html += '</div>';
+                            });
+                            $('#stats').html(html);
 
-                        html += '<div style="height:60px">';
-                        html += '<span class="thumbnail_person" style="background-color: #ccc; width: 50px; height: 50px; margin: 5px; padding-right: 5px; float: left;"></span>';
-                        html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
-                        html += '<span class="person_fonction">' + val.fonction + '</span><br />';
-                        html += '<span class="person_cumuls">' + autresFonctions.join(' ') + '</span>';
-                        html += '</div>';
-                    });
-                    $('#stats').html(html);
-
-                }
+                        }
                 )
             }
             for (var lisvg in lignes) {
