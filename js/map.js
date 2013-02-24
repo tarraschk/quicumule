@@ -506,7 +506,7 @@ $(function() {
                         .hover(function() {
                             if (this != lastSelected) {
                                 this.animate({
-                                    fill: 'rgb(155,141,138)'
+                                    fill: 'rgb(170,130,0)'
                                 }, 10);
                             }
                         }, function() {

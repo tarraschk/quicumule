@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5 {
 }
 a, a:hover {
     color: #333;
+}
 .thumbnail_person{
     border-radius: 3px 3px 3px 3px;
     background-color: #ccc;
