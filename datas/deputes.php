@@ -16,9 +16,34 @@
  * 
  * 
  */
+
+$pages_web = array();
 define('DEPUTE_JSON', 'deputes_enmandat.json');
 define('OUTPUT_JSON', 'deputes.json');
 
+function getCompteTwitter($dep_num, $name, $prenom){
+    if(!isset($pages_web[$dep_num])){
+        $pages_web[$dep_num] = file_get_contents('http://www.tweetdepute.fr/?dep=' . $dep_num);
+    }
+    $page = $pages_web[$dep_num];
+    
+    
+    $page =  str_replace("\n", "", $page    );
+    preg_match_all("|<li>(.*)<\/li>|U",
+    $page,
+    $out, PREG_PATTERN_ORDER);
+    
+    foreach($out[0] as $key=>$value){
+        if(strpos($value, $name ) !== FALSE){
+            $page = str_replace("\n", "", $page);
+            preg_match_all("|<p class=\"screen-name\">(.*)</p>|U", $value, $twitter, PREG_PATTERN_ORDER);
+            if(count($twitter) > 1){
+                return $twitter[1][0];
+            }
+        }
+    }
+    return false;
+}
 function listing_deputes_cumulard() {
     
     $deputes_array = json_decode(file_get_contents(DEPUTE_JSON), TRUE);
@@ -41,11 +66,15 @@ function listing_deputes_cumulard() {
                 }
                 $autres_fonctions[] = array('mandat' => $mandat);
             }
+            $twitter = getCompteTwitter($depute_objet['num_deptmt'], $depute_objet['nom_de_famille'], $depute_objet['prenom']);
+            if($twitter === FALSE){
+                $twitter = '';
+            }
             $depute = [
                 'nom' => $depute_objet['nom_de_famille'],
                 'prenom' => $depute_objet['prenom'],
                 'fonction' => 'Député',
-                'twitter' => '',
+                'twitter' => $twitter,
                 'site_web' => $depute_objet['sites_web'],
                 'departement_num' => $depute_objet['num_deptmt'],
                 'autres_fonctions' => $autres_fonctions
