@@ -538,9 +538,13 @@ $(function() {
                                     if(val.autres_fonctions[i].mandat === undefined) continue;
                                     autresFonctions.push(val.autres_fonctions[i].mandat);
                                 }
+                                var twitter = '';
+                                if(val.twitter !== ''){
+                                    twitter = '<a class="lien_twitter" href="https://twitter.com/' + val.twitter + '">' + val.twitter + '</a>';
+                                }
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
-                                html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + '</b></span><br />';
+                                html += '<span class="person_name"><b>' + val.prenom + ' ' + val.nom + twitter + '</b></span><br />';
                                 html += '<span class="person_fonction">' + val.fonction + ', qui cumule :<br />' + autresFonctions.join('<br />') + '</span>';
                                 html += '</li>';
                             });
