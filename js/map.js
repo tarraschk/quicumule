@@ -540,7 +540,7 @@ $(function() {
                                 }
                                 var twitter = '';
                                 if(val.twitter !== ''){
-                                    twitter = '<a class="lien_twitter" href="https://twitter.com/' + val.twitter + '">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">' + val.twitter + '</a>';
                                 }
                                 html += '<li class="person_info">';
                                 html += '<img src="" class="thumbnail_person" />';
