@@ -1,6 +1,5 @@
 $(function () {
     var deputes, senateurs, ministres;
-    getCumualards();
     function getCumualardsByDept(departement_num) {
             var cumulards = [];
 
@@ -30,7 +29,7 @@ $(function () {
             return cumulards;
     }
 
-    function getCumualards(departement_num) {
+    function showMap() {
         $.when($.getJSON('datas/deputes.json'), $.getJSON('datas/senateurs.json'), $.getJSON('datas/ministres_tries.json')).done(function(data1, data2, data3) {
             //Quand les 3 requêtes sont terminés, on dessine la carte
             deputes     = data1[0].values;
@@ -513,5 +512,5 @@ $(function () {
         
         });
     }
-
+    showMap();
 });
