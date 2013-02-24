@@ -1,17 +1,9 @@
 $(function () {
-        var rsr = Raphael("mapholder");
-		/*var rsrStats = Raphael("stats",284,100);
-		var rsrEchelle = Raphael("echelle",40,555);
-		var echelle = rsrEchelle.rect(0,0,10,555);
-		echelle.attr({
-			"fill": "90-rgb(186,183,194)-rgb(172,161,143):33-rgb(78,106,129):66-rgb(47,67,88)",
-			"stroke" : 'rgb(255,255,255)',
-			"opacity" : 0.8
-		});
-		rsrEchelle.text(20, 10, 22).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-		rsrEchelle.text(20, 195, 6).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-		rsrEchelle.text(20, 380, 2).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});
-		rsrEchelle.text(20, 545, 0).attr({fill: "#000000", stroke: "none", opacity: 0.6, "font-size": 10, "font-weight": "bold"});*/
+        var w = 510;
+        var h = 555;
+        var rsr = Raphael("mapholder",w, h);
+        rsr.setViewBox(0,0,w,h,true);
+        rsr.setSize('100%', '100%');
 		var attributsLigne = {
 		            stroke: '#777777',
 		            'stroke-width': 1,
