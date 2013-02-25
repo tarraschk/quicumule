@@ -560,7 +560,7 @@ $(function() {
                                                      "Comment justifiez-vous votre cumul de mandats %3F"
                                                     ];
                                     var phrase = phrases[Math.floor(Math.random()*phrases.length)];
-                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
                                 }
                                 else {
                                     var phrases =   [
@@ -568,7 +568,7 @@ $(function() {
                                                      "cumule les mandats et les indemnités. Est-ce la crise pour tout le monde %3F"
                                                     ];
                                     var phrase = phrases[Math.floor(Math.random()*phrases.length)];
-                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+val.prenom+' '+val.nom+' '+phrase+' - " class="twitter-share-button" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+val.prenom+' '+val.nom+' '+phrase+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
                                 }
                                 html += '<img src="'+lienImage+'" class="hidden-phone pull-left img-rounded media-object" style="width:48px" />';
                                 html += '<div class="media-body"><strong class="media-heading">' + val.prenom + ' ' + val.nom + '</strong><div class="pull-right " style="margin-right:0px;">'+twitter+'</div>';
