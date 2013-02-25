@@ -1,8 +1,10 @@
 
 
+/*
 body, .container, .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
     border: white 1px solid;
 }
+*/
 
 
 html, body {
@@ -52,6 +54,6 @@ a, a:hover {
     list-style:none outside none
 }
 
-.container {
-    margin-top: 20px;
+.container-desktop {
+    margin-top: 40px;
 }
