@@ -560,7 +560,7 @@ $(function() {
                                                      "Comment justifiez-vous votre cumul de mandats %3F"
                                                     ];
                                     var phrase = phrases[Math.floor(Math.random()*phrases.length)];
-                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a><i class="icon-ok"></i>';
                                 }
                                 else {
                                     var phrases =   [
