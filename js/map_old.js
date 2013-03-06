@@ -2,18 +2,6 @@ $(function() {
     function capitaliseFirstLetter(string){
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    function fireEvent(element,event) {
-        if (document.createEventObject) {
-            // dispatch for IE
-            var evt = document.createEventObject();
-            return element.fireEvent('on'+event,evt)
-        } else {
-            // dispatch for firefox + others
-            var evt = document.createEvent("HTMLEvents");
-            evt.initEvent(event, true, true); // event type,bubbling,cancelable
-            return !element.dispatchEvent(evt);
-        }
-    }
     var deputes, senateurs, ministres;
     function getCumualardsByDept(departement_num) {
         var cumulards = [];
@@ -50,7 +38,6 @@ $(function() {
             deputes = data1[0].values;
             senateurs = data2[0].values;
             ministres = data3[0].values;
-            pointeursDpt = {};
 
             var w = 550;
             var h = 555;
@@ -499,7 +486,6 @@ $(function() {
             for (var dpt in carte) {
                 var dpt_num = dpt;
                 var temp = rsr.path(carte[dpt].path);
-                pointeursDpt[dpt_num] = temp;
                 noms[temp.id] = carte[dpt].nom;
                 nums[temp.id] = dpt;
                 somme[temp.id] = getCumualardsByDept(dpt_num).length;
@@ -574,7 +560,7 @@ $(function() {
                                                      "Comment justifiez-vous votre cumul de mandats %3F"
                                                     ];
                                     var phrase = phrases[Math.floor(Math.random()*phrases.length)];
-                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a>';
+                                    twitter = '<a href="https://twitter.com/intent/tweet?hashtags=Cumulards&text='+phrase+' @'+val.twitter.split('@')[1]+' - " class="twitter-share-button pull-right" data-lang="fr" data-count="none" data-url="http://www.quicumule.fr" data-counturl="http://www.quicumule.fr" data-size="medium">' + val.twitter + '</a><i class="icon-ok"></i>';
                                 }
                                 else {
                                     var phrases =   [
@@ -592,7 +578,6 @@ $(function() {
                             html+="<br />";
                             $('#stats').html('<strong class="">'+carte[nums[this.id]].nom+'</strong><ul class="media-list">' + html + '</ul>');
                             $.getScript("http://platform.twitter.com/widgets.js");
-                            window.location.hash = dept_num;
                         }
                 )
             }
@@ -612,9 +597,8 @@ $(function() {
                 "stroke": 'rgb(255,255,255)',
                 "opacity": 0.8
             });
-            if(window.location.hash.split('#')[1] !== undefined) {
-                fireEvent(pointeursDpt[window.location.hash.split('#')[1]].node, 'click');
-            }
+
+
         });
     }
     showMap();
