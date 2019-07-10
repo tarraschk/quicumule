@@ -1,13 +1,17 @@
 Qui cumule ?
 =========
 
+![aperçu](https://raw.githubusercontent.com/tarraschk/quicumule/master/quicumule.jpg)
+
 Projet réalisé lors du Hackathon Open Data Day 2013 à Nantes
 
 Du 28 Février au 10 Mars 2013, le projet QuiCumule a permis aux internautes d'interpeller les élus cumulant les mandats.
 
 Au total, 2 385 tweets ont été envoyés aux élus, pour seulement 9 réponses, répertoriées sur [ce site](https://cumulards.wordpress.com/).
 
-Suite au blocage de nombreux comptes Twitter d'internautes s'exprimant grâce à notre site, nous avons décidé de suspendre le site.
+Suite au blocage de nombreux comptes Twitter d'internautes s'exprimant grâce à notre site, nous avons décidé de suspendre le site quelques jours plus tard.
+
+Ce repo est donc l'archive du projet !
 
 Contributeurs : Maxime Alay-Eddine, Jean-Alain Ré, Edouard Voyer
 
